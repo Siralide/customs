@@ -58,7 +58,7 @@
                 <p>3. Selecciona los servicios a realizar:</p>
                 <ul>
                     <li>Reparación: $45</li>
-                    <li>Pintura: 50% del porcentaje base (5% si hay modificaciones)</li>
+                    <li>Pintura: 30% del porcentaje base (5% si hay modificaciones)</li>
                     <li>Modificaciones: porcentaje base del precio</li>
                 </ul>
                 <p>4. Si aplica, selecciona el convenio para aplicar un descuento adicional (10% por defecto).</p>
@@ -138,7 +138,7 @@
         }
 
         if (document.getElementById('pintura').checked) {
-            const porcentajeAplicado = tieneModificaciones ? 5 : 50;
+            const porcentajeAplicado = tieneModificaciones ? 5 : 30;
             const valor = Math.ceil((precio * porcentaje / 100) * (porcentajeAplicado / 100));
             total += valor;
             detalle += `<div>Pintura (${porcentajeAplicado}% del ${porcentaje}%): $${valor}</div>`;
